@@ -1,0 +1,27 @@
+{
+  "name": "support-token",
+  "version": "1.0.0",
+  "description": "support token",
+  "main": "index.js",
+  "dependencies": {
+    "@openzeppelin/contracts": "^3.3.0",
+    "bignumber.js": "^9.0.1"
+  },
+  "devDependencies": {
+    "@openzeppelin/test-environment": "^0.1.8",
+    "@openzeppelin/test-helpers": "^0.5.9",
+    "chai": "^4.2.0",
+    "ganache-cli": "^6.12.1",
+    "mocha": "^8.2.1",
+    "truffle": "^5.1.58"
+  },
+  "scripts": {
+    "test": "truffle compile && mocha --exit --recursive",
+    "compile": "npx truffle compile",
+    "deploy-dev": "npx truffle migrate --network development",
+    "run-deploy-dev": "npx ganache-cli --deterministic && npm run deploy-dev",
+    "run-index": "npx truffle exec --network development ./scripts/index.js"
+  },
+  "author": "Dmitry Yudin",
+  "license": "ISC"
+}
